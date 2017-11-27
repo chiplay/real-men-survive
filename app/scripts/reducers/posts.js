@@ -1,7 +1,6 @@
 import update from 'react-addons-update';
 import _find from 'lodash/find';
 import _sortBy from 'lodash/sortBy';
-import _findIndex from 'lodash/findIndex';
 import moment from 'moment';
 
 import {

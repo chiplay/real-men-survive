@@ -4,7 +4,7 @@ import algoliasearch from 'algoliasearch';
 import _startCase from 'lodash/startCase';
 import WPAPI from 'wpapi';
 
-const client = algoliasearch('Y488X1WEPX', '5a718b4a933cc7a657bbf4273df0d63c');
+const client = algoliasearch('C2Q6DEAWPU', 'f9ab850b6a14cb93d5705ff11a1d52f6');
 
 export const RECEIVE_PAGE = 'RECEIVE_PAGE';
 export const RECEIVE_PAGE_ERROR = 'RECEIVE_PAGE_ERROR';
@@ -31,7 +31,6 @@ export const FETCH_COMMENTS_ERROR = 'FETCH_COMMENTS_ERROR';
 export const START_SUBMIT_COMMENT = 'START_SUBMIT_COMMENT';
 export const SUBMIT_COMMENT_SUCCESS = 'SUBMIT_COMMENT_SUCCESS';
 export const SUBMIT_COMMENT_ERROR = 'SUBMIT_COMMENT_ERROR';
-
 
 const POSTS_PER_PAGE = 10;
 
@@ -165,7 +164,7 @@ export function fetchComments(id) {
   return (dispatch) => {
     dispatch(startFetchComments());
 
-    const wp = new WPAPI({ endpoint: 'https://wp.laybabylay.com/wp-json' });
+    const wp = new WPAPI({ endpoint: 'https://wp.realmensurvive.com/wp-json' });
 
     wp.comments()
       .param('post', id)
@@ -180,7 +179,7 @@ export function submitComment(searchParams) {
   return (dispatch) => {
     dispatch(startSubmitComment());
 
-    return fetch('https://wp.laybabylay.com/api/respond/submit_comment', {
+    return fetch('https://wp.realmensurvive.com/api/respond/submit_comment', {
       method: 'POST',
       body: searchParams
     })
@@ -280,7 +279,7 @@ export function search(queryObj = { query: '', page: 0, hitsPerPage: 20 }) {
       if (post_type === 'posts') {
         facetFilters.push(`taxonomies.category:${category}`);
       } else {
-        facetFilters.push(`taxonomies.product_type:${category}`);
+        facetFilters.push(`taxonomies.scenarios:${category}`);
       }
     }
 
