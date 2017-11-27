@@ -99,9 +99,9 @@ export default class Post extends Component {
     const media = src.replace(re, `upload/w_2000`);
 
     window.PinUtils.pinOne({
-      url: `https://www.laybabylay.com/${this.props.post.slug}`,
+      url: `https://www.realmensurvive.com/${this.props.post.slug}`,
       media,
-      description: `${this.props.post.post_title} on LayBabyLay.com`
+      description: `${this.props.post.post_title} on RealMenSurvive.com`
     });
   }
 
@@ -229,7 +229,7 @@ export default class Post extends Component {
               <div className="addthis-region">
                 <PinterestButton
                   className="pinterest-button"
-                  url={`https://www.laybabylay.com/${slug}`}
+                  url={`https://www.realmensurvive.com/${slug}`}
                   media={shareImage}
                   windowOptions={windowOptions()}
                 >
@@ -237,7 +237,7 @@ export default class Post extends Component {
                 </PinterestButton>
                 <FacebookButton
                   className="facebook-button"
-                  url={`https://www.laybabylay.com/${slug}`}
+                  url={`https://www.realmensurvive.com/${slug}`}
                   appId="179291298758035"
                   windowOptions={windowOptions()}
                 >
@@ -245,7 +245,7 @@ export default class Post extends Component {
                 </FacebookButton>
                 <TwitterButton
                   className="tweet-button"
-                  url={`https://www.laybabylay.com/${slug}`}
+                  url={`https://www.realmensurvive.com/${slug}`}
                   windowOptions={windowOptions()}
                 >
                   Tweet

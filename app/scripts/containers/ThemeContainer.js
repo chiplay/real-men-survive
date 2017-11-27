@@ -26,8 +26,8 @@ class ThemeContainer extends Component {
       >
         <Box>
           <Helmet
-            titleTemplate="%s - Lay Baby Lay"
-            defaultTitle="Lay Baby Lay"
+            titleTemplate="%s - Real Men Survive"
+            defaultTitle="Real Men Survive"
           >
             <html lang="en" amp />
 
@@ -36,17 +36,17 @@ class ThemeContainer extends Component {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta httpEquiv="content-type" content="text/html; charset=utf-8" />
 
-            <title>Nursery Decor &amp; Baby Room Ideas</title>
-            <meta name="description" content="Inspiration to create spaces for your little ones that are full of imagination, color, and delight and maybe find a little encouragement in this crazy but wonderful journey of having babies and watching them grow." />
+            <title>Survival Scenarios & Gear</title>
+            <meta name="description" content="No matter what the situation, we've got you covered." />
 
-            <meta property="og:title" content="Lay Baby Lay" />
+            <meta property="og:title" content="Real Men Survive" />
             <meta property="og:type" content="website" />
-            <meta property="og:description" content="Nursery Decor &amp; Baby Room Ideas" />
-            <meta property="og:url" content="http://laybabylay.com" />
-            <meta property="og:site_name" content="Lay Baby Lay" />
-            <meta property="fb:app_id" content="179291298758035" />
+            <meta property="og:description" content="No matter what the situation, we've got you covered." />
+            <meta property="og:url" content="https://www.realmensurvive.com" />
+            <meta property="og:site_name" content="Real Men Survive" />
+            {/* <meta property="fb:app_id" content="179291298758035" /> */}
 
-            <link rel="canonical" href="http://laybabylay.com" />
+            <link rel="canonical" href="https://www.realmensurvive.com" />
           </Helmet>
 
           <Header {...this.props} />

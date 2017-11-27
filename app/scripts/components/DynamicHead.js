@@ -34,22 +34,22 @@ export default class DynamicHead extends Component {
 
     return (
       <Helmet
-        titleTemplate="%s - Lay Baby Lay"
-        defaultTitle="Lay Baby Lay"
+        titleTemplate="%s - Real Men Survive"
+        defaultTitle="Real Men Survive"
       >
         <title itemProp="name" lang="en">{_startCase(post_title)}</title>
         <meta name="description" content={excerpt || snippet} />
 
-        <meta property="og:title" content={`${_startCase(post_title)} - Lay Baby Lay`} />
+        <meta property="og:title" content={`${_startCase(post_title)} - Real Men Survive`} />
         <meta property="og:type" content="article" />
-        <meta property="article:author" content="https://www.facebook.com/joni.h.lay" />
-        <meta property="article:publisher" content="https://www.facebook.com/laybabylay" />
+        <meta property="article:author" content="https://www.facebook.com/chiplay" />
+        <meta property="article:publisher" content="https://www.facebook.com/realmensurvive.shop" />
         <meta property="article:section" content={_startCase(categoryTitle)} />
         <meta property="og:description" content={excerpt || snippet} />
-        <meta property="og:url" content={`https://www.laybabylay.com/${slug}`} />
+        <meta property="og:url" content={`https://www.realmensurvive.com/${slug}`} />
         <meta property="og:image" content={imageSrc} />
 
-        <link rel="canonical" href={`https://www.laybabylay.com/${slug}`} />
+        <link rel="canonical" href={`https://www.realmensurvive.com/${slug}`} />
       </Helmet>
     );
   }
