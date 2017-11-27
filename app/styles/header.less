@@ -1,0 +1,251 @@
+@import (reference) "variables.less";
+@import (reference) "mixins.less";
+
+#header {
+  width: 100%;
+  height: 90px;
+  top: 0;
+  z-index: 1200;
+
+  @media (min-width: @screen-tablet) {
+    position: fixed;
+    height: 60px;
+  }
+}
+
+.header {
+  background: #fff;
+  width: 100%;
+  height: 90px;
+  position: relative;
+  overflow: hidden;
+
+  @media (min-width: @screen-tablet) {
+    height: 150px;
+    .transition(all .15s cubic-bezier(0.5, 0.3, 0.5, .7));
+    .translate3d(0, 0, 0);
+    .backface-visibility(visible);
+
+    &.slim {
+      .translate3d(0, -90px, 0);
+      .transition(all .3s cubic-bezier(0.5, 0.3, 0.5, .7));
+      .box-shadow(0 0 50px rgba(0,0,0,0.04));
+
+      h1 {
+        .opacity(0);
+        -webkit-transition-delay: 0s;
+        transition-delay: 0s
+      }
+
+      .header__nav {
+        .transition(all .3s cubic-bezier(0.5, 0.3, 0.5, .7));
+        .translate3d(0, 44px, 0);
+      }
+
+      .logo {
+        .transition(all .3s cubic-bezier(0.5, 0.3, 0.5, .7));
+        .translate3d(0, 78px, 0);
+        height: 32px;
+      }
+    }
+  }
+
+  &__nav {
+    padding: 0;
+    margin-top: 5px;
+    text-align: center;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: 38px;
+    justify-content: space-evenly;
+    align-items: center;
+
+    @media (min-width: @screen-tablet) {
+      .transition(all .15s cubic-bezier(0.5, 0.3, 0.5, .7));
+      .translate3d(0, 0, 0);
+      .backface-visibility(visible);
+      padding: 62px 0 10px;
+      position: absolute;
+      display: block;
+      top: calc(50% - 12px);
+      left: 0;
+      right: 0;
+    }
+  }
+
+  &__nav-item {
+    display: inline-block;
+    margin: 0;
+
+    @media (min-width: @screen-tablet) {
+      margin: 0 20px;
+    }
+
+    @media (min-width: @screen-desktop) {
+      margin: 0 30px;
+    }
+
+    a {
+      text-transform: uppercase;
+      color: @black;
+      line-height: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 10px 5px;
+      position: relative;
+      text-transform: uppercase;
+      -webkit-font-smoothing: antialiased;
+
+      @media (min-width: @screen-tablet) {
+        letter-spacing: 2px;
+        font-size: 12px;
+      }
+
+      @media (min-width: @screen-desktop) {
+        font-size: 14px;
+      }
+
+      &:hover {
+        color: @lbl-pink;
+      }
+    }
+
+    &--home {
+      text-indent: -10000px;
+      height: 14px;
+      display: none;
+
+      @media (min-width: @screen-tablet) {
+        width: 160px;
+        display: inline-block;
+      }
+
+      @media (min-width: @screen-desktop) {
+        width: 210px;
+      }
+    }
+  }
+}
+
+.navigation-wrapper {
+  position: relative;
+  font-size: 0;
+  width: 100%;
+  max-height: 90px;
+  z-index: 1000;
+  .transition(all .3s linear);
+
+  .search & {
+    .box-shadow(none);
+  }
+
+  @media (min-width: @screen-tablet) {
+
+  }
+}
+
+.logo {
+  display: block;
+  z-index: 100;
+  margin: 0 auto;
+  width: 110px;
+  height: 45px;
+  text-align: center;
+  vertical-align: middle;
+
+  .footer & {
+    position: relative;
+    float: left;
+  }
+
+  @media (min-width: @screen-tablet) {
+    .transition(all .15s cubic-bezier(0.5, 0.3, 0.5, .7));
+    .translate3d(0, 0, 0);
+    .backface-visibility(visible);
+    .opacity(1);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 20px auto;
+    width: 180px;
+    height: 100px;
+    display: inline-block;
+  }
+
+  @media (min-width: @screen-desktop) {
+    width: 210px;
+    height: 110px;
+  }
+
+  .search & {
+    .translate3d(-75px, -16px, 0);
+    .opacity(0);
+
+    @media (max-width: @screen-desktop-max) {
+      .translate3d(-30%, -16px, 0);
+    }
+
+    @media (max-width: @screen-tablet-max) {
+      .translate3d(-55px, -20px, 0);
+    }
+  }
+
+  &:before {
+    .opacity(1);
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 100%;
+    height: 25px;
+    background-image: url('https://res.cloudinary.com/laybabylay/image/upload/rhino_lt35fu.png');
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: contain;
+
+    @media (min-width: @screen-xsmall) {
+      height: 35px;
+    }
+
+    @media (min-width: @screen-tablet) {
+      background-position: top center;
+      left: 0px;
+      top: 0;
+      height: 40px;
+    }
+  }
+
+  h1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    .transition(all .1s linear);
+    -webkit-transition-delay: .1s;
+    transition-delay: .1s;
+    background-image: url('https://res.cloudinary.com/laybabylay/image/upload/logo_eurtrt.png');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 100%;
+
+    @media (min-width: @screen-tablet) {
+      background-size: 80%;
+    }
+  }
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 0 18px;
+  color: #3a3a3a;
+  font-weight: bold;
+  font-size: 12px;
+  height: 62px;
+  line-height: 62px;
+  text-align: center;
+  width: 9.25%;
+  vertical-align: middle;
+}

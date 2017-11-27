@@ -1,0 +1,114 @@
+@import (reference) "variables.less";
+@import (reference) "mixins.less";
+
+.postcards {
+  width: 100%;
+  overflow: hidden;
+
+  @media (min-width: @screen-small) {
+
+  }
+
+  @media (min-width: @screen-medium) {
+
+  }
+
+  @media (min-width: @screen-large) {
+
+  }
+}
+
+.slick-slider {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.slick-list {
+  padding-bottom: 30px !important;
+}
+
+.slick-dots {
+  list-style: none;
+  margin: 10px 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  li {
+    margin: 0;
+    padding: 0 5px;
+    display: inline-block;
+
+    &.slick-active {
+      button {
+        background-color: @lbl-pink;
+      }
+    }
+  }
+
+  button {
+    background-color: #ddd;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    text-indent: -10000px;
+  }
+}
+
+
+.slick-arrow {
+  background-image: url('https://res.cloudinary.com/laybabylay/image/upload/sprites_lblvio.png');
+  margin-top: 25px;
+  width: 20px;
+  height: 35px;
+  display: block;
+  z-index: 500;
+  background-repeat: no-repeat;
+  background-position: -51px -87px;
+  background-size: 212px 130px;
+  cursor: pointer;
+  position: absolute;
+  top: 39%;
+  text-indent: -10000px;
+
+  &.slick-next {
+    .rotate(180deg);
+    right: 40px;
+  }
+
+  &.slick-prev {
+    left: 40px;
+  }
+
+  &:before {
+    content: ' ';
+    position: absolute;
+    height: 60px;
+    width: 50px;
+    top: -20px;
+    left: -15px;
+  }
+
+  @media (max-width: @screen-small-max) {
+    display: none;
+  }
+
+  &:hover {
+    background-position: -51px -51px;
+  }
+
+  &.disabled,
+  &.disabled:hover {
+    // background-color: lighten(@lbl-pink,25%);
+    .opacity(0.1);
+    cursor: default;
+    pointer-events: none;
+    background-position: -51px -87px;
+  }
+}
