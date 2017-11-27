@@ -26,7 +26,7 @@ export const getActivePosts = createSelector(
 export const getProductCategories = createSelector(
   [getPageBySlug],
   (page) => {
-    return page ? page.product_categories : [];
+    return page ? page.featured_scenarios : [];
   }
 );
 
