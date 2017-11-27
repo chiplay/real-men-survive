@@ -1,11 +1,11 @@
 {
-  "name": "laybabylay",
-  "version": "2.0.0",
-  "description": "Lay Baby Lay",
+  "name": "real-men-survive",
+  "version": "1.0.0",
+  "description": "Real Men Survive",
   "private": false,
   "repository": {
     "type": "git",
-    "url": "git@github.com/chiplay/laybabylay.git"
+    "url": "git@github.com/chiplay/real-men-survive.git"
   },
   "author": "Chip Lay",
   "scripts": {
