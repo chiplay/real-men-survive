@@ -119,7 +119,7 @@ export default class Sidebar extends Component {
               className="search-input"
               id="search-input"
               name="query"
-              placeholder="Search Lay Baby Lay"
+              placeholder="Search"
               type="search"
               value={this.state.query}
               onChange={this.handleInputChange}

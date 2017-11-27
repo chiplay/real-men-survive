@@ -151,12 +151,9 @@ class SearchContainer extends Component {
 
     return (
       <div className="search">
-        <Helmet
-          titleTemplate="%s - Lay Baby Lay"
-          defaultTitle="Lay Baby Lay"
-        >
+        <Helmet>
           <title itemProp="name" lang="en">{_startCase(resultsTitle)}</title>
-          <meta property="og:title" content={`${_startCase(resultsTitle)} - Lay Baby Lay`} />
+          <meta property="og:title" content={`${_startCase(resultsTitle)} - Real Men Survive`} />
           <meta property="og:url" content={window.location.href} />
           <link rel="canonical" href={window.location.href} />
         </Helmet>

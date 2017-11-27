@@ -18,7 +18,7 @@ export default class Header extends Component {
 
               <Link className="logo" to="/">
                 <h1>
-                  <span className="sr-only">Lay Baby Lay - Nursery Decor and Baby Room Ideas</span>
+                  <span className="sr-only">Real Men Survive</span>
                 </h1>
               </Link>
 
@@ -27,13 +27,13 @@ export default class Header extends Component {
                   <Link to="/explore/posts">Explore</Link>
                 </li>
                 <li className="header__nav-item header__nav-item--last">
-                  <Link to="/explore/products">Joni&rsquo;s Picks</Link>
+                  <Link to="/explore/products">Scenarios</Link>
                 </li>
                 <li className="header__nav-item header__nav-item--home">
                   <Link to="/">Home</Link>
                 </li>
                 <li className="header__nav-item">
-                  <Link to="https://society6.com/jonilay" target="_blank">Print Shop</Link>
+                  <Link to="https://shopify.com/addsitehere" target="_blank">Swag</Link>
                 </li>
                 <li className="header__nav-item">
                   <Link to="/about">About</Link>
